@@ -331,16 +331,12 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 					Position=UDim2.new(0.908723712, 0, 0.0239103697, 0),
 					AnchorPoint=Vector2.new(0,0)
 				}):Play()
-				OpenerButton.Visible = false
-				ScreenGui.Enabled = true
 			else
 				TweenService:Create(ImageButton,TweenInfo.new(0.5),{
 					Size=UDim2.new(0.3, 0,0.3, 0),
 					Position=UDim2.new(1,0,-0.009,0),
 					AnchorPoint=Vector2.new(1,0)
 				}):Play()
-				OpenerButton.Visible = true
-				ScreenGui.Enabled = false
 			end
 
 			ui_toggleong(toggle_valu)
@@ -1906,68 +1902,6 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 			end
 		end
 	end)
-
-	-- Add this at the top of AddWindow, after local declarations
-	local OpenerGui = Instance.new("ScreenGui")
-	OpenerGui.Name = "OpenerGui"
-	OpenerGui.Parent = CoreGui
-	OpenerGui.ResetOnSpawn = false
-	OpenerGui.IgnoreGuiInset = true
-	OpenerGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
-	ProtectGui(OpenerGui)
-
-	local OpenerButton = Instance.new("ImageButton")
-	OpenerButton.Name = "OpenerButton"
-	OpenerButton.Parent = OpenerGui
-	OpenerButton.BackgroundTransparency = 1
-	OpenerButton.Size = UDim2.new(0, 48, 0, 48)
-	OpenerButton.Position = UDim2.new(0, 20, 0.5, -24)
-	OpenerButton.Image = "rbxassetid://108433148946093"
-	OpenerButton.ZIndex = 10000
-	OpenerButton.Visible = false
-
-	-- In the ImageButton.MouseButton1Click handler (the one that toggles the GUI)
-	ImageButton.MouseButton1Click:Connect(function()
-		toggle_valu=not toggle_valu
-
-		if toggle_valu then
-			oldPositionClose = Frame.Position
-			TweenService:Create(ImageButton,TweenInfo.new(0.5),{
-				Size=UDim2.new(0.0900000036, 0, 0.0900000036, 0),
-				Position=UDim2.new(0.908723712, 0, 0.0239103697, 0),
-				AnchorPoint=Vector2.new(0,0)
-			}):Play()
-			OpenerButton.Visible = false
-			ScreenGui.Enabled = true
-		else
-			TweenService:Create(ImageButton,TweenInfo.new(0.5),{
-				Size=UDim2.new(0.3, 0,0.3, 0),
-				Position=UDim2.new(1,0,-0.009,0),
-				AnchorPoint=Vector2.new(1,0)
-			}):Play()
-			OpenerButton.Visible = true
-			ScreenGui.Enabled = false
-		end
-
-		ui_toggleong(toggle_valu)
-	end)
-
-	-- Add handler for OpenerButton to open the GUI
-	OpenerButton.MouseButton1Click:Connect(function()
-		toggle_valu = true
-		OpenerButton.Visible = false
-		ScreenGui.Enabled = true
-		ui_toggleong(true)
-	end)
-
-	-- At the end of AddWindow, ensure the opener is visible if GUI starts closed
-	if not toggle_valu then
-		OpenerButton.Visible = true
-		ScreenGui.Enabled = false
-	else
-		OpenerButton.Visible = false
-		ScreenGui.Enabled = true
-	end
 
 	return WindowFunctinos
 end
