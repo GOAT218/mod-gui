@@ -179,6 +179,18 @@ function NEVERLOSE:Theme(name)
 		NEVERLOSE.Themes.StrokeColor = Color3.fromRGB(28, 28, 28)
 		NEVERLOSE.Themes.ButtonBlackgroundColor = Color3.fromRGB(13, 13, 13)
 	end
+
+	if name == "slur" then
+		NEVERLOSE.Themes.BlackgroundColor = Color3.fromRGB(45, 15, 35)
+		NEVERLOSE.Themes.BlackColor = Color3.fromRGB(25, 8, 20)
+		NEVERLOSE.Themes.HeaderColor = Color3.fromRGB(35, 12, 28)
+		NEVERLOSE.Themes.TraceColor = Color3.fromRGB(55, 18, 45)
+		NEVERLOSE.Themes.MainColor = Color3.fromRGB(255, 105, 180)
+		NEVERLOSE.Themes.MainColorDrop = Color3.fromRGB(85, 28, 68)
+		NEVERLOSE.Themes.SectionColor = Color3.fromRGB(30, 10, 25)
+		NEVERLOSE.Themes.StrokeColor = Color3.fromRGB(65, 22, 52)
+		NEVERLOSE.Themes.ButtonBlackgroundColor = Color3.fromRGB(35, 12, 28)
+	end
 end
 
 function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
@@ -1556,7 +1568,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				Dropdown.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				Dropdown.BorderSizePixel = 0
 				Dropdown.Position = UDim2.new(0.0500000231, 0, 0.601014614, 0)
-				Dropdown.Size = UDim2.new(0.899999976, 0, -0.351014495, 0)
+				Dropdown.Size = UDim2.new(1.2, 0, -0.351014495, 0)
 				Dropdown.ZIndex = 5
 
 				UIAspectRatioConstraint.Parent = Dropdown
@@ -1593,7 +1605,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				TopBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				TopBar.BorderSizePixel = 0
 				TopBar.Position = UDim2.new(0.950000167, 0, 0.500000715, 0)
-				TopBar.Size = UDim2.new(0.313529521, 0, 0.5, 0)
+				TopBar.Size = UDim2.new(0.45, 0, 0.5, 0)
 				TopBar.ZIndex = 6
 
 				UICorner_2.CornerRadius = UDim.new(0, 3)
@@ -1649,7 +1661,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				DownBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				DownBar.BorderSizePixel = 0
 				DownBar.Position = UDim2.new(0.948214233, 0, 0.873961239, 0)
-				DownBar.Size = UDim2.new(0.308999985, 0, 0, 0)
+				DownBar.Size = UDim2.new(0.45, 0, 0, 0)
 				DownBar.Visible = false
 				DownBar.ZIndex = 10
 
@@ -1703,9 +1715,9 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 
 				local function auto_updatea()
 					if DropdownToggle then
-						TweenService:Create(DownBar,TweenInfo.new(0.1),{Size=UDim2.new(0.4,0,0,get_list_v4())}):Play()
+						TweenService:Create(DownBar,TweenInfo.new(0.1),{Size=UDim2.new(0.45,0,0,get_list_v4())}):Play()
 					else
-						TweenService:Create(DownBar,TweenInfo.new(0.1),{Size=UDim2.new(0.4,0,0,0)}):Play()
+						TweenService:Create(DownBar,TweenInfo.new(0.1),{Size=UDim2.new(0.45,0,0,0)}):Play()
 					end
 				end
 
@@ -1715,7 +1727,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 						TweenService:Create(Icon,TweenInfo.new(0.15),{Rotation=90}):Play()
 						TweenService:Create(LabelText,TweenInfo.new(0.4),{TextTransparency=0}):Play()
 
-						TweenService:Create(DownBar,TweenInfo.new(0.1),{Size=UDim2.new(0.4,0,0,get_list_size())}):Play()
+						TweenService:Create(DownBar,TweenInfo.new(0.1),{Size=UDim2.new(0.45,0,0,get_list_size())}):Play()
 
 						auto_updatea()
 
@@ -1743,7 +1755,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 						TweenService:Create(Icon,TweenInfo.new(0.15),{Rotation=-90}):Play()
 						TweenService:Create(LabelText,TweenInfo.new(0.4),{TextTransparency=0.3}):Play()
 
-						TweenService:Create(DownBar,TweenInfo.new(0.1),{Size=UDim2.new(0.4,0,0,0)}):Play()
+						TweenService:Create(DownBar,TweenInfo.new(0.1),{Size=UDim2.new(0.45,0,0,0)}):Play()
 					end
 				end
 
