@@ -1895,6 +1895,29 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 		end
 	end)
 
+	-- Add Close Button to Main GUI
+	local CloseButton = Instance.new("ImageButton")
+	CloseButton.Name = "CloseButton"
+	CloseButton.Parent = Frame
+	CloseButton.AnchorPoint = Vector2.new(1, 0)
+	CloseButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	CloseButton.BackgroundTransparency = 1.0
+	CloseButton.BorderSizePixel = 0
+	CloseButton.Position = UDim2.new(0.99, 0, 0.01, 0)
+	CloseButton.Size = UDim2.new(0, 32, 0, 32)
+	CloseButton.SizeConstraint = Enum.SizeConstraint.RelativeYY
+	CloseButton.ZIndex = 1000
+	CloseButton.Image = "rbxassetid://9127564477"
+	CloseButton.ScaleType = Enum.ScaleType.Fit
+
+	CloseButton.MouseButton1Click:Connect(function()
+		toggle_valu = false
+		ui_toggleong(false)
+		if typeof(updateOpenerVisibility) == "function" then
+			updateOpenerVisibility()
+		end
+	end)
+
 	return WindowFunctinos
 end
 
