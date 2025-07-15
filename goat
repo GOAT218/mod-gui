@@ -126,15 +126,15 @@ end
 local NEVERLOSE = {
 	auto_function = {},
 	Themes = {
-		BlackgroundColor = Color3.fromRGB(43, 43, 43),
-		BlackColor = Color3.fromRGB(16, 16, 16),
-		HeaderColor = Color3.fromRGB(47, 47, 47),
-		TraceColor = Color3.fromRGB(100, 100, 100),
-		MainColor = Color3.fromRGB(255, 140, 0),
-		MainColorDrop = Color3.fromRGB(65, 54, 31),
-		SectionColor = Color3.fromRGB(26, 26, 26),
-		StrokeColor = Color3.fromRGB(50, 50, 50),
-		ButtonBlackgroundColor = Color3.fromRGB(26, 26, 26)
+		BlackgroundColor = Color3.fromRGB(30, 28, 38), -- main background
+		BlackColor = Color3.fromRGB(24, 22, 32),       -- panel background
+		HeaderColor = Color3.fromRGB(30, 28, 38),      -- header background
+		TraceColor = Color3.fromRGB(60, 58, 78),       -- lines/dividers
+		MainColor = Color3.fromRGB(255, 85, 185),      -- pink accent
+		MainColorDrop = Color3.fromRGB(255, 85, 185),  -- accent for sliders/toggles
+		SectionColor = Color3.fromRGB(36, 34, 44),     -- card background
+		StrokeColor = Color3.fromRGB(60, 58, 78),      -- border color
+		ButtonBlackgroundColor = Color3.fromRGB(36, 34, 44) -- button background
 	},
 	_Version="10.C",
 	_Name="NEVERLOSE"
@@ -396,7 +396,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 	Frame_2.Size = UDim2.new(0.774634778, 0, 1, 0)
 	Frame_2.ZIndex = 2
 
-	UICorner_2.CornerRadius = UDim.new(0, 4)
+	UICorner_2.CornerRadius = UDim.new(0, 12)
 	UICorner_2.Parent = Frame_2
 
 	Frame_3.Parent = Frame
@@ -408,7 +408,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 	Frame_3.Size = UDim2.new(0.774999976, 0, 0.140000001, 0)
 	Frame_3.ZIndex = 4
 
-	UICorner_3.CornerRadius = UDim.new(0, 4)
+	UICorner_3.CornerRadius = UDim.new(0, 12)
 	UICorner_3.Parent = Frame_3
 
 	DropShadow.Name = "DropShadow"
@@ -421,7 +421,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 	DropShadow.ZIndex = 3
 	DropShadow.Image = "rbxassetid://6014261993"
 	DropShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
-	DropShadow.ImageTransparency = 0.860
+	DropShadow.ImageTransparency = 0.850
 	DropShadow.ScaleType = Enum.ScaleType.Slice
 	DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
 
@@ -434,7 +434,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 	HeadName.Position = UDim2.new(0.0100000342, 0, 0.010000146, 0)
 	HeadName.Size = UDim2.new(0.205458686, 0, 0.133462012, 0)
 	HeadName.ZIndex = 4
-	HeadName.Font = Enum.Font.SourceSansBold
+	HeadName.Font = Enum.Font.GothamBold
 	HeadName.Text = NameScriptHub or "NEVERLOSE"
 	HeadName.TextColor3 = Color3.fromRGB(255, 255, 255)
 	HeadName.TextScaled = true
@@ -485,7 +485,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 	outlo.Size = UDim2.new(0.774999976, 0, 0, 1)
 	outlo.ZIndex = 4
 
-	UICorner_4.CornerRadius = UDim.new(0, 4)
+	UICorner_4.CornerRadius = UDim.new(0, 12)
 	UICorner_4.Parent = outlo
 
 	outlo_2.Name = "outlo"
@@ -499,7 +499,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 	outlo_2.Size = UDim2.new(0, 1, 1, 0)
 	outlo_2.ZIndex = 4
 
-	UICorner_5.CornerRadius = UDim.new(0, 4)
+	UICorner_5.CornerRadius = UDim.new(0, 12)
 	UICorner_5.Parent = outlo_2
 
 	outlo_3.Name = "outlo"
@@ -513,7 +513,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 	outlo_3.Size = UDim2.new(0.223908007, 0, 0, 1)
 	outlo_3.ZIndex = 4
 
-	UICorner_6.CornerRadius = UDim.new(0, 4)
+	UICorner_6.CornerRadius = UDim.new(0, 12)
 	UICorner_6.Parent = outlo_3
 
 	UserData.Name = "UserData"
@@ -526,7 +526,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 	UserData.Size = UDim2.new(0.225179195, 0, 0.0718210712, 0)
 	UserData.ZIndex = 5
 
-	UICorner_7.CornerRadius = UDim.new(0, 2)
+	UICorner_7.CornerRadius = UDim.new(0, 12)
 	UICorner_7.Parent = UserData
 
 	UserImage.Name = "UserImage"
@@ -629,7 +629,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 		UIAspectRatioConstraint.AspectRatio = 4.000
 		UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
 
-		UICorner.CornerRadius = UDim.new(0, 3)
+		UICorner.CornerRadius = UDim.new(0, 12)
 		UICorner.Parent = TabButton
 
 		Image.Name = "Image"
@@ -650,7 +650,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 
 		GetImageData(tostring(IconType),Image)
 
-		UICorner_2.CornerRadius = UDim.new(0, 3)
+		UICorner_2.CornerRadius = UDim.new(0, 12)
 		UICorner_2.Parent = Image
 
 		Label.Name = "Label"
@@ -805,7 +805,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 			Section.Size = UDim2.new(0.970000029, 0, 0, 0)
 			Section.ZIndex = 5
 
-			UICorner.CornerRadius = UDim.new(0, 3)
+			UICorner.CornerRadius = UDim.new(0, 12)
 			UICorner.Parent = Section
 
 			UIStroke.Color = NEVERLOSE.Themes.StrokeColor
@@ -822,7 +822,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 			Header.Position = UDim2.new(0.5, 0, 0.100000001, 0)
 			Header.Size = UDim2.new(0.949999988, 0, 0, 15)
 			Header.ZIndex = 5
-			Header.Font = Enum.Font.SourceSansSemibold
+			Header.Font = Enum.Font.GothamBold
 			Header.Text = SectionName or "Section"
 			Header.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Header.TextScaled = true
@@ -853,7 +853,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 			TweenService:Create(UIStroke,TweenInfo.new(1),{Transparency=0}):Play()
 
 			local section_value = true
-			UICorner_2.CornerRadius = UDim.new(0, 3)
+			UICorner_2.CornerRadius = UDim.new(0, 12)
 			UICorner_2.Parent = lay
 
 			local function update_section_size(va)
@@ -931,7 +931,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				UIAspectRatioConstraint.AspectRatio = 7.000
 				UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
 
-				UICorner.CornerRadius = UDim.new(0, 3)
+				UICorner.CornerRadius = UDim.new(0, 12)
 				UICorner.Parent = Button
 
 				LabelText.Name = "LabelText"
@@ -1000,7 +1000,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				UIAspectRatioConstraint.AspectRatio = 6.000
 				UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
 
-				UICorner.CornerRadius = UDim.new(0, 3)
+				UICorner.CornerRadius = UDim.new(0, 12)
 				UICorner.Parent = Label
 
 				LabelText.Name = "LabelText"
@@ -1080,7 +1080,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				UIAspectRatioConstraint.AspectRatio = 7.000
 				UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
 
-				UICorner.CornerRadius = UDim.new(0, 3)
+				UICorner.CornerRadius = UDim.new(0, 12)
 				UICorner.Parent = Toggle
 
 				LabelText.Name = "LabelText"
@@ -1216,7 +1216,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				UIAspectRatioConstraint.AspectRatio = 7.000
 				UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
 
-				UICorner.CornerRadius = UDim.new(0, 3)
+				UICorner.CornerRadius = UDim.new(0, 12)
 				UICorner.Parent = Keybind
 
 				LabelText.Name = "LabelText"
@@ -1248,7 +1248,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				BrindText.Size = UDim2.new(0.150000006, 0, 0.5, 0)
 				BrindText.ZIndex = 6
 
-				UICorner_2.CornerRadius = UDim.new(0, 3)
+				UICorner_2.CornerRadius = UDim.new(0, 12)
 				UICorner_2.Parent = BrindText
 
 				UIStroke.Thickness = 0.500
@@ -1367,7 +1367,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				UIAspectRatioConstraint.AspectRatio = 7.000
 				UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
 
-				UICorner.CornerRadius = UDim.new(0, 3)
+				UICorner.CornerRadius = UDim.new(0, 12)
 				UICorner.Parent = Slider
 
 				LabelText.Name = "LabelText"
@@ -1400,7 +1400,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				Box.Size = UDim2.new(0.150000006, 0, 0.5, 0)
 				Box.ZIndex = 6
 
-				UICorner_2.CornerRadius = UDim.new(0, 3)
+				UICorner_2.CornerRadius = UDim.new(0, 12)
 				UICorner_2.Parent = Box
 
 				UIStroke.Thickness = 0.500
@@ -1436,7 +1436,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				MoveFrame.Size = UDim2.new(0.290949076, 0, 0.099999994, 0)
 				MoveFrame.ZIndex = 5
 
-				UICorner_3.CornerRadius = UDim.new(0, 3)
+				UICorner_3.CornerRadius = UDim.new(0, 12)
 				UICorner_3.Parent = MoveFrame
 
 				Inline.Name = "Inline"
@@ -1449,7 +1449,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				Inline.Size = UDim2.new((Default/Max), 0, 1, 0)
 				Inline.ZIndex = 5
 
-				UICorner_4.CornerRadius = UDim.new(0, 3)
+				UICorner_4.CornerRadius = UDim.new(0, 12)
 				UICorner_4.Parent = Inline
 
 				Cir.Name = "Cir"
@@ -1536,8 +1536,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				end
 
 				local Dropdown = Instance.new("Frame")
-				-- Remove aspect ratio constraint for a bigger dropdown
-				-- local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+				local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 				local UICorner = Instance.new("UICorner")
 				local LabelText = Instance.new("TextLabel")
 				local TopBar = Instance.new("Frame")
@@ -1556,15 +1555,15 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				Dropdown.BackgroundTransparency = 1.000
 				Dropdown.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				Dropdown.BorderSizePixel = 0
-				Dropdown.Position = UDim2.new(0.025, 0, 0.601, 0)
-				Dropdown.Size = UDim2.new(0.95, 0, 0.12, 0) -- Bigger height
+				Dropdown.Position = UDim2.new(0.0500000231, 0, 0.601014614, 0)
+				Dropdown.Size = UDim2.new(0.899999976, 0, -0.351014495, 0)
 				Dropdown.ZIndex = 5
 
-				-- UIAspectRatioConstraint.Parent = Dropdown
-				-- UIAspectRatioConstraint.AspectRatio = 7.000
-				-- UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
+				UIAspectRatioConstraint.Parent = Dropdown
+				UIAspectRatioConstraint.AspectRatio = 7.000
+				UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
 
-				UICorner.CornerRadius = UDim.new(0, 6)
+				UICorner.CornerRadius = UDim.new(0, 12)
 				UICorner.Parent = Dropdown
 
 				LabelText.Name = "LabelText"
@@ -1574,14 +1573,14 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				LabelText.BackgroundTransparency = 1.000
 				LabelText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				LabelText.BorderSizePixel = 0
-				LabelText.Position = UDim2.new(0.22, 0, 0.5, 0)
-				LabelText.Size = UDim2.new(0.4, 0, 0.8, 0)
+				LabelText.Position = UDim2.new(0.296666116, 0, 0.499999374, 0)
+				LabelText.Size = UDim2.new(0.593582511, 0, 0.75, 0)
 				LabelText.ZIndex = 6
-				LabelText.Font = Enum.Font.SourceSansBold
+				LabelText.Font = Enum.Font.SourceSansSemibold
 				LabelText.Text = DropdownName or "Label-Test"
 				LabelText.TextColor3 = Color3.fromRGB(255, 255, 255)
 				LabelText.TextScaled = true
-				LabelText.TextSize = 20.000 -- Larger font
+				LabelText.TextSize = 14.000
 				LabelText.TextWrapped = true
 				LabelText.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -1590,17 +1589,17 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				TopBar.Active = true
 				TopBar.AnchorPoint = Vector2.new(1, 0.5)
 				TopBar.BackgroundColor3 = NEVERLOSE.Themes.ButtonBlackgroundColor
-				TopBar.BackgroundTransparency = 0.300
+				TopBar.BackgroundTransparency = 0.500
 				TopBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				TopBar.BorderSizePixel = 0
-				TopBar.Position = UDim2.new(0.98, 0, 0.5, 0)
-				TopBar.Size = UDim2.new(0.45, 0, 0.8, 0) -- Bigger
+				TopBar.Position = UDim2.new(0.950000167, 0, 0.500000715, 0)
+				TopBar.Size = UDim2.new(0.313529521, 0, 0.5, 0)
 				TopBar.ZIndex = 6
 
-				UICorner_2.CornerRadius = UDim.new(0, 6)
+				UICorner_2.CornerRadius = UDim.new(0, 12)
 				UICorner_2.Parent = TopBar
 
-				UIStroke.Thickness = 1.2
+				UIStroke.Thickness = 0.500
 				UIStroke.Color = NEVERLOSE.Themes.StrokeColor
 				UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 				UIStroke.Parent = TopBar
@@ -1612,14 +1611,14 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				ValueText.BackgroundTransparency = 1.000
 				ValueText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				ValueText.BorderSizePixel = 0
-				ValueText.Position = UDim2.new(0.45, 0, 0.5, 0)
-				ValueText.Size = UDim2.new(0.7, 0, 0.998, 0)
+				ValueText.Position = UDim2.new(0.358571023, 0, 0.500001013, 0)
+				ValueText.Size = UDim2.new(0.697142839, 0, 0.998000145, 0)
 				ValueText.ZIndex = 6
-				ValueText.Font = Enum.Font.SourceSansBold
+				ValueText.Font = Enum.Font.SourceSansSemibold
 				ValueText.Text = tostring(Default)
 				ValueText.TextColor3 = Color3.fromRGB(255, 255, 255)
 				ValueText.TextScaled = true
-				ValueText.TextSize = 20.000
+				ValueText.TextSize = 14.000
 				ValueText.TextWrapped = true
 
 				Icon.Name = "Icon"
@@ -1631,14 +1630,14 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				Icon.BorderSizePixel = 0
 				Icon.Position = UDim2.new(1, 0, 0.5, 0)
 				Icon.Rotation = 90.000
-				Icon.Size = UDim2.new(0.7, 0, 0.7, 0)
+				Icon.Size = UDim2.new(0.949999988, 0, 0.949999988, 0)
 				Icon.SizeConstraint = Enum.SizeConstraint.RelativeYY
 				Icon.ZIndex = 6
-				Icon.Font = Enum.Font.SourceSansBold
+				Icon.Font = Enum.Font.SourceSans
 				Icon.Text = "<"
 				Icon.TextColor3 = Color3.fromRGB(255, 255, 255)
 				Icon.TextScaled = true
-				Icon.TextSize = 20.000
+				Icon.TextSize = 14.000
 				Icon.TextWrapped = true
 
 				DownBar.Name = "DownBar"
@@ -1649,15 +1648,15 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				DownBar.BackgroundTransparency = 0.100
 				DownBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				DownBar.BorderSizePixel = 0
-				DownBar.Position = UDim2.new(0.98, 0, 1, 0)
-				DownBar.Size = UDim2.new(0.45, 0, 0, 0) -- Wider and will expand more
+				DownBar.Position = UDim2.new(0.948214233, 0, 0.873961239, 0)
+				DownBar.Size = UDim2.new(0.308999985, 0, 0, 0)
 				DownBar.Visible = false
 				DownBar.ZIndex = 10
 
-				UICorner_3.CornerRadius = UDim.new(0, 6)
+				UICorner_3.CornerRadius = UDim.new(0, 12)
 				UICorner_3.Parent = DownBar
 
-				UIStroke_2.Thickness = 1.2
+				UIStroke_2.Thickness = 0.500
 				UIStroke_2.Color = NEVERLOSE.Themes.StrokeColor
 				UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 				UIStroke_2.Parent = DownBar
@@ -1665,7 +1664,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				UIListLayout.Parent = DownBar
 				UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 				UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-				UIListLayout.Padding = UDim.new(0, 8) -- More padding
+				UIListLayout.Padding = UDim.new(0, 2)
 
 				local choose = Default
 				local DropdownToggle = false
@@ -1757,26 +1756,27 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 
 				local function newbutton()
 					local Dropdown = Instance.new("TextButton")
-					-- local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+					local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
 					Dropdown.Name = "Dropdown"
 					Dropdown.Parent = DownBar
 					Dropdown.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-					Dropdown.BackgroundTransparency = 0.15
+					Dropdown.BackgroundTransparency = 1.000
 					Dropdown.BorderColor3 = Color3.fromRGB(0, 0, 0)
 					Dropdown.BorderSizePixel = 0
-					Dropdown.Size = UDim2.new(0.97, 0, 0.7, 0) -- Bigger
-					Dropdown.ZIndex = 10000
-					Dropdown.Font = Enum.Font.SourceSansBold
+					Dropdown.Size = UDim2.new(0.99000001, 0, 0.5, 0)
+					Dropdown.ZIndex = 1000
+					Dropdown.Font = Enum.Font.SourceSansSemibold
 					Dropdown.Text = "List"
 					Dropdown.TextColor3 = Color3.fromRGB(255, 255, 255)
 					Dropdown.TextScaled = true
-					Dropdown.TextSize = 20.000
+					Dropdown.TextSize = 14.000
 					Dropdown.TextWrapped = true
 					TweenService:Create(Dropdown,TweenInfo.new(0.1),{TextTransparency=0.3}):Play()
-					-- UIAspectRatioConstraint.Parent = Dropdown
-					-- UIAspectRatioConstraint.AspectRatio = 4.5
-					-- UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
+					Dropdown.ZIndex = 10000
+					UIAspectRatioConstraint.Parent = Dropdown
+					UIAspectRatioConstraint.AspectRatio = 4.5
+					UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
 
 					Dropdown.MouseEnter:Connect(function()
 						TweenService:Create(Dropdown,TweenInfo.new(0.1),{TextTransparency=0}):Play()
@@ -1937,7 +1937,7 @@ function NEVERLOSE:KeySystem(TitleName,LinkKey,callback)
 	Frame_2.Size = UDim2.new(1, 0, 0.913586974, 0)
 	Frame_2.ZIndex = 2
 
-	UICorner_2.CornerRadius = UDim.new(0, 2)
+	UICorner_2.CornerRadius = UDim.new(0, 12)
 	UICorner_2.Parent = Frame_2
 
 	Title.Name = "Title"
@@ -1981,7 +1981,7 @@ function NEVERLOSE:KeySystem(TitleName,LinkKey,callback)
 	UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 	UIStroke.Parent = PasteKey
 
-	UICorner_3.CornerRadius = UDim.new(0, 3)
+	UICorner_3.CornerRadius = UDim.new(0, 12)
 	UICorner_3.Parent = PasteKey
 
 	CopyKey.Name = "CopyKey"
@@ -2006,7 +2006,7 @@ function NEVERLOSE:KeySystem(TitleName,LinkKey,callback)
 	UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 	UIStroke_2.Parent = CopyKey
 
-	UICorner_4.CornerRadius = UDim.new(0, 3)
+	UICorner_4.CornerRadius = UDim.new(0, 12)
 	UICorner_4.Parent = CopyKey
 
 	Submit.Name = "Submit"
@@ -2031,7 +2031,7 @@ function NEVERLOSE:KeySystem(TitleName,LinkKey,callback)
 	UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 	UIStroke_3.Parent = Submit
 
-	UICorner_5.CornerRadius = UDim.new(0, 3)
+	UICorner_5.CornerRadius = UDim.new(0, 12)
 	UICorner_5.Parent = Submit
 
 	TweenService:Create(Frame,TweenInfo.new(0.4,Enum.EasingStyle.Quint),{Size=UDim2.new(0.25, 0, 0.25, 0)}):Play()
@@ -2184,7 +2184,7 @@ function NEVERLOSE:Notification()
 		Notify.ClipsDescendants = true
 		Notify.Size = UDim2.new(0.75,0,0,0)
 
-		UICorner.CornerRadius = UDim.new(0, 3)
+		UICorner.CornerRadius = UDim.new(0, 12)
 		UICorner.Parent = Notify
 
 		UIStroke.Color = NEVERLOSE.Themes.StrokeColor
