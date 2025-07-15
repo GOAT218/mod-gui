@@ -1847,6 +1847,33 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				TweenService:Create(UIStroke,TweenInfo.new(1),{Transparency=0}):Play()
 			end
 
+			-- After Section is created:
+			local SectionPadding = Instance.new("UIPadding")
+			SectionPadding.PaddingTop = UDim.new(0, 8)
+			SectionPadding.PaddingBottom = UDim.new(0, 8)
+			SectionPadding.PaddingLeft = UDim.new(0, 12)
+			SectionPadding.PaddingRight = UDim.new(0, 12)
+			SectionPadding.Parent = Section
+
+			-- After Left is created:
+			local LeftPadding = Instance.new("UIPadding")
+			LeftPadding.PaddingTop = UDim.new(0, 8)
+			LeftPadding.PaddingBottom = UDim.new(0, 8)
+			LeftPadding.PaddingLeft = UDim.new(0, 12)
+			LeftPadding.PaddingRight = UDim.new(0, 18) -- extra for gap
+			LeftPadding.Parent = Left
+			Left.Size = UDim2.new(0.48, 0, 0.98, 0)
+
+			-- After Right is created:
+			local RightPadding = Instance.new("UIPadding")
+			RightPadding.PaddingTop = UDim.new(0, 8)
+			RightPadding.PaddingBottom = UDim.new(0, 8)
+			RightPadding.PaddingLeft = UDim.new(0, 18) -- extra for gap
+			RightPadding.PaddingRight = UDim.new(0, 12)
+			RightPadding.Parent = Right
+			Right.Position = UDim2.new(0.52, 0, 0.5, 0)
+			Right.Size = UDim2.new(0.48, 0, 0.98, 0)
+
 			return sectionfunc
 		end
 
