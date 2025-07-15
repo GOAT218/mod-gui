@@ -104,14 +104,20 @@ local function GetImageData(name:string,image:ImageLabel)
 		image.ImageRectSize = Vector2.new(35,35)
 	end
 
-	if name == "settings" then
-		image.Image = "rbxassetid://3515393063"
+	if name == "mouse" then
+		image.Image = "rbxassetid://134840978698947"
 		image.ImageRectOffset = Vector2.new(0, 0)
 		image.ImageRectSize = Vector2.new(0, 0)
 	end
 
 	if name == "user" then
 		image.Image = "rbxassetid://10494577250"
+		image.ImageRectOffset = Vector2.new(0, 0)
+		image.ImageRectSize = Vector2.new(0, 0)
+	end
+
+	if name == "sword" then
+		image.Image = "rbxassetid://1095708"
 		image.ImageRectOffset = Vector2.new(0, 0)
 		image.ImageRectSize = Vector2.new(0, 0)
 	end
@@ -1530,7 +1536,8 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				end
 
 				local Dropdown = Instance.new("Frame")
-				local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+				-- Remove aspect ratio constraint for a bigger dropdown
+				-- local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 				local UICorner = Instance.new("UICorner")
 				local LabelText = Instance.new("TextLabel")
 				local TopBar = Instance.new("Frame")
@@ -1549,15 +1556,15 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				Dropdown.BackgroundTransparency = 1.000
 				Dropdown.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				Dropdown.BorderSizePixel = 0
-				Dropdown.Position = UDim2.new(0.0500000231, 0, 0.601014614, 0)
-				Dropdown.Size = UDim2.new(0.899999976, 0, -0.351014495, 0)
+				Dropdown.Position = UDim2.new(0.025, 0, 0.601, 0)
+				Dropdown.Size = UDim2.new(0.95, 0, 0.12, 0) -- Bigger height
 				Dropdown.ZIndex = 5
 
-				UIAspectRatioConstraint.Parent = Dropdown
-				UIAspectRatioConstraint.AspectRatio = 7.000
-				UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
+				-- UIAspectRatioConstraint.Parent = Dropdown
+				-- UIAspectRatioConstraint.AspectRatio = 7.000
+				-- UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
 
-				UICorner.CornerRadius = UDim.new(0, 3)
+				UICorner.CornerRadius = UDim.new(0, 6)
 				UICorner.Parent = Dropdown
 
 				LabelText.Name = "LabelText"
@@ -1567,14 +1574,14 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				LabelText.BackgroundTransparency = 1.000
 				LabelText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				LabelText.BorderSizePixel = 0
-				LabelText.Position = UDim2.new(0.296666116, 0, 0.499999374, 0)
-				LabelText.Size = UDim2.new(0.593582511, 0, 0.75, 0)
+				LabelText.Position = UDim2.new(0.22, 0, 0.5, 0)
+				LabelText.Size = UDim2.new(0.4, 0, 0.8, 0)
 				LabelText.ZIndex = 6
-				LabelText.Font = Enum.Font.SourceSansSemibold
+				LabelText.Font = Enum.Font.SourceSansBold
 				LabelText.Text = DropdownName or "Label-Test"
 				LabelText.TextColor3 = Color3.fromRGB(255, 255, 255)
 				LabelText.TextScaled = true
-				LabelText.TextSize = 14.000
+				LabelText.TextSize = 20.000 -- Larger font
 				LabelText.TextWrapped = true
 				LabelText.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -1583,17 +1590,17 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				TopBar.Active = true
 				TopBar.AnchorPoint = Vector2.new(1, 0.5)
 				TopBar.BackgroundColor3 = NEVERLOSE.Themes.ButtonBlackgroundColor
-				TopBar.BackgroundTransparency = 0.500
+				TopBar.BackgroundTransparency = 0.300
 				TopBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				TopBar.BorderSizePixel = 0
-				TopBar.Position = UDim2.new(0.950000167, 0, 0.500000715, 0)
-				TopBar.Size = UDim2.new(0.313529521, 0, 0.5, 0)
+				TopBar.Position = UDim2.new(0.98, 0, 0.5, 0)
+				TopBar.Size = UDim2.new(0.45, 0, 0.8, 0) -- Bigger
 				TopBar.ZIndex = 6
 
-				UICorner_2.CornerRadius = UDim.new(0, 3)
+				UICorner_2.CornerRadius = UDim.new(0, 6)
 				UICorner_2.Parent = TopBar
 
-				UIStroke.Thickness = 0.500
+				UIStroke.Thickness = 1.2
 				UIStroke.Color = NEVERLOSE.Themes.StrokeColor
 				UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 				UIStroke.Parent = TopBar
@@ -1605,14 +1612,14 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				ValueText.BackgroundTransparency = 1.000
 				ValueText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				ValueText.BorderSizePixel = 0
-				ValueText.Position = UDim2.new(0.358571023, 0, 0.500001013, 0)
-				ValueText.Size = UDim2.new(0.697142839, 0, 0.998000145, 0)
+				ValueText.Position = UDim2.new(0.45, 0, 0.5, 0)
+				ValueText.Size = UDim2.new(0.7, 0, 0.998, 0)
 				ValueText.ZIndex = 6
-				ValueText.Font = Enum.Font.SourceSansSemibold
+				ValueText.Font = Enum.Font.SourceSansBold
 				ValueText.Text = tostring(Default)
 				ValueText.TextColor3 = Color3.fromRGB(255, 255, 255)
 				ValueText.TextScaled = true
-				ValueText.TextSize = 14.000
+				ValueText.TextSize = 20.000
 				ValueText.TextWrapped = true
 
 				Icon.Name = "Icon"
@@ -1624,14 +1631,14 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				Icon.BorderSizePixel = 0
 				Icon.Position = UDim2.new(1, 0, 0.5, 0)
 				Icon.Rotation = 90.000
-				Icon.Size = UDim2.new(0.949999988, 0, 0.949999988, 0)
+				Icon.Size = UDim2.new(0.7, 0, 0.7, 0)
 				Icon.SizeConstraint = Enum.SizeConstraint.RelativeYY
 				Icon.ZIndex = 6
-				Icon.Font = Enum.Font.SourceSans
+				Icon.Font = Enum.Font.SourceSansBold
 				Icon.Text = "<"
 				Icon.TextColor3 = Color3.fromRGB(255, 255, 255)
 				Icon.TextScaled = true
-				Icon.TextSize = 14.000
+				Icon.TextSize = 20.000
 				Icon.TextWrapped = true
 
 				DownBar.Name = "DownBar"
@@ -1642,15 +1649,15 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				DownBar.BackgroundTransparency = 0.100
 				DownBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				DownBar.BorderSizePixel = 0
-				DownBar.Position = UDim2.new(0.948214233, 0, 0.873961239, 0)
-				DownBar.Size = UDim2.new(0.308999985, 0, 0, 0)
+				DownBar.Position = UDim2.new(0.98, 0, 1, 0)
+				DownBar.Size = UDim2.new(0.45, 0, 0, 0) -- Wider and will expand more
 				DownBar.Visible = false
 				DownBar.ZIndex = 10
 
-				UICorner_3.CornerRadius = UDim.new(0, 3)
+				UICorner_3.CornerRadius = UDim.new(0, 6)
 				UICorner_3.Parent = DownBar
 
-				UIStroke_2.Thickness = 0.500
+				UIStroke_2.Thickness = 1.2
 				UIStroke_2.Color = NEVERLOSE.Themes.StrokeColor
 				UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 				UIStroke_2.Parent = DownBar
@@ -1658,7 +1665,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				UIListLayout.Parent = DownBar
 				UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 				UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-				UIListLayout.Padding = UDim.new(0, 2)
+				UIListLayout.Padding = UDim.new(0, 8) -- More padding
 
 				local choose = Default
 				local DropdownToggle = false
@@ -1750,27 +1757,26 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 
 				local function newbutton()
 					local Dropdown = Instance.new("TextButton")
-					local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+					-- local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
 					Dropdown.Name = "Dropdown"
 					Dropdown.Parent = DownBar
 					Dropdown.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-					Dropdown.BackgroundTransparency = 1.000
+					Dropdown.BackgroundTransparency = 0.15
 					Dropdown.BorderColor3 = Color3.fromRGB(0, 0, 0)
 					Dropdown.BorderSizePixel = 0
-					Dropdown.Size = UDim2.new(0.99000001, 0, 0.5, 0)
-					Dropdown.ZIndex = 1000
-					Dropdown.Font = Enum.Font.SourceSansSemibold
+					Dropdown.Size = UDim2.new(0.97, 0, 0.7, 0) -- Bigger
+					Dropdown.ZIndex = 10000
+					Dropdown.Font = Enum.Font.SourceSansBold
 					Dropdown.Text = "List"
 					Dropdown.TextColor3 = Color3.fromRGB(255, 255, 255)
 					Dropdown.TextScaled = true
-					Dropdown.TextSize = 14.000
+					Dropdown.TextSize = 20.000
 					Dropdown.TextWrapped = true
 					TweenService:Create(Dropdown,TweenInfo.new(0.1),{TextTransparency=0.3}):Play()
-					Dropdown.ZIndex = 10000
-					UIAspectRatioConstraint.Parent = Dropdown
-					UIAspectRatioConstraint.AspectRatio = 4.5
-					UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
+					-- UIAspectRatioConstraint.Parent = Dropdown
+					-- UIAspectRatioConstraint.AspectRatio = 4.5
+					-- UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
 
 					Dropdown.MouseEnter:Connect(function()
 						TweenService:Create(Dropdown,TweenInfo.new(0.1),{TextTransparency=0}):Play()
