@@ -460,7 +460,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 	UIListLayout.Parent = TabButtons
 	UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-	UIListLayout.Padding = UDim.new(0, 4)
+	UIListLayout.Padding = UDim.new(0, 12)
 
 	scrolling_connect(TabButtons)
 
@@ -708,7 +708,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 		UIListLayout.Parent = Left
 		UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-		UIListLayout.Padding = UDim.new(0, 5)
+		UIListLayout.Padding = UDim.new(0, 12)
 
 		Right.Name = "Right"
 		Right.Parent = Tab
@@ -727,7 +727,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 		UIListLayout_2.Parent = Right
 		UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
 		UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-		UIListLayout_2.Padding = UDim.new(0, 5)
+		UIListLayout_2.Padding = UDim.new(0, 12)
 
 		scrolling_connect(Right)
 		scrolling_connect(Left)
@@ -835,7 +835,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 			UIListLayout.Parent = Section
 			UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-			UIListLayout.Padding = UDim.new(0, 4)
+			UIListLayout.Padding = UDim.new(0, 12)
 
 			lay.Name = "lay"
 			lay.Parent = Section
@@ -1664,7 +1664,7 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 				UIListLayout.Parent = DownBar
 				UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 				UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-				UIListLayout.Padding = UDim.new(0, 2)
+				UIListLayout.Padding = UDim.new(0, 12)
 
 				local choose = Default
 				local DropdownToggle = false
